@@ -1,0 +1,139 @@
+ANSWER 1:
+
+#include <stdio.h>
+
+int mystrlen(char str[])
+{
+    int i;
+    for (i = 0; str[i] != '\0'; i++)
+    {
+    }
+    return i;
+}
+
+int main()
+{
+    char mystring[100];
+
+    printf("Enter your String: ");
+    fgets(mystring, sizeof(mystring), stdin);
+
+    int len = mystrlen(mystring);
+
+    if (len > 0 && mystring[len - 1] == '\n')
+    {
+        len--;
+    }
+
+    printf("Length of String: %d\n", len);
+    return 0;
+}
+ANSWER 2:
+
+#include <stdio.h>
+#include <string.h>
+
+int stringLength(char str[])
+{
+    int i;
+    for (i = 0; str[i] != '\0'; i++)
+    {
+    }
+    return i;
+}
+
+int main()
+{
+    char mystring[100] = "";
+
+    printf("Input: ");
+    fgets(mystring, sizeof(mystring), stdin);
+
+    int len = stringLength(mystring);
+    printf("Length of String: %d\n", len);
+
+    printf("\n");
+
+    int vowel_count = 0;
+    int consonent_count = 0;
+    int digit_count = 0;
+    int space_count = 0;
+
+    for (int i = 0; mystring[i] != '\0'; i++)
+    {
+        if (mystring[i] == 'A' || mystring[i] == 'E' || mystring[i] == 'I' || mystring[i] == 'O' || mystring[i] == 'U' || mystring[i] == 'a' || mystring[i] == 'e' || mystring[i] == 'i' || mystring[i] == 'o' || mystring[i] == 'u')
+        {
+            vowel_count++;
+        }
+    }
+
+    printf("Vowel Count: %d\n", vowel_count);
+
+    for (int i = 0; mystring[i] != '\0'; i++)
+    {
+        if (((mystring[i] >= 'A' && mystring[i] <= 'Z') || (mystring[i] >= 'a' && mystring[i] <= 'z')) && mystring[i] != 'A' && mystring[i] != 'E' && mystring[i] != 'I' && mystring[i] != 'O' && mystring[i] != 'U' &&
+            mystring[i] != 'a' && mystring[i] != 'e' && mystring[i] != 'i' && mystring[i] != 'o' && mystring[i] != 'u')
+
+        {
+            consonent_count++;
+        }
+    }
+
+    printf("Consonent Count: %d\n", consonent_count);
+
+    for (int i = 0; mystring[i] != '\0'; i++)
+    {
+        if (mystring[i] == ' ')
+        {
+            space_count++;
+        }
+    }
+
+    printf("Space Count: %d\n", space_count);
+
+    for (int i = 0; mystring[i] != '\0'; i++)
+    {
+        if (mystring[i] >= '0' && mystring[i] <= '9')
+        {
+            digit_count++;
+        }
+
+    }
+
+    printf("Digit Count: %d\n", digit_count);
+
+    return 0;
+}
+ANSWER 3:
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char mystring[100] = "";
+
+    printf("String Input: ");
+    fgets(mystring, sizeof(mystring), stdin);
+
+    char char_search;
+
+    printf("Character: ");
+    scanf(" %c", &char_search);
+
+    int counter = 0;
+
+    for (int i = 0; mystring[i] != '\0'; i++)
+    {
+        if (mystring[i] == char_search)
+        {
+            counter++;
+        }
+    }
+
+    printf("Frequncy: %d", counter);
+
+    return 0;
+}
+ANSWER 4:
+

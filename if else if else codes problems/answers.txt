@@ -1,0 +1,162 @@
+que 1:
+#include <stdio.h>
+int main() {
+    int a;
+    printf("Enter Number: ");
+    scanf("%d", &a);
+    if (a > 0) {
+        printf("The Number is Positive!\n");
+    }
+    else if (a < 0) {
+        printf("The Number is Negative!");
+    }
+    else {
+        printf("The Number is Zero!");
+    }
+
+    return 0;
+}
+que 2:
+#include <stdio.h>
+int main () {
+    printf("Even or Odd?\n");
+    int a;
+    printf("Please Enter Your Number: ");
+    scanf("%d", &a);
+    if (a%2 == 0) {
+        printf("This Number is an Even Number!");   
+    }
+    else {
+        printf("This Number is a Odd Number!");
+    }
+    return 0;
+}
+que 3
+#include <stdio.h>
+int main () {
+    int a;
+    int b;
+    printf("Largest Number\n");
+    printf("Enter the First Number: \n");
+    scanf("%d", &a);
+    printf("Enter the Second Number: \n");
+    scanf("%d", &b);
+    if (a > b) {
+        printf("%d is bigger than %d", a,b);
+    }
+    else if (a < b) {
+        printf("%d is bigger than %d", b,a);
+    }
+    else {
+        printf("Both Numbers are equal!");
+    }
+    return 0;
+}   
+que 4
+#include <stdio.h>
+int main () {
+    int a;
+    printf("Grading System\n");
+    printf("Enter your Marks: \n");
+    scanf("%d", &a);
+    if (a == 100) {
+        printf("You've got A Grade!, You have scored Full Marks! CHAMP!");
+    }
+    else if (a >= 90) {
+        printf("You've got A Grade!");
+    }   
+    else if (a >= 80 && a < 90) {
+        printf("You've got B Grade!");
+    }
+    else if (a >= 70 && a < 80) {
+        printf("You've got C Grade!");
+    }
+    else if (a >= 60 && a < 70) {
+        printf("You've got D Grade!");
+    }
+    else {
+        printf("Sorry, You've Failed and got E Grade!");
+    }
+    return 0;
+}
+que 5
+#include <stdio.h>
+int main () {
+    int a;
+    printf("Voting Eligibility Test!\n");
+    printf("Please Enter your Age: \n");
+    scanf("%d", &a);
+    if (a >= 18) {
+        printf("You're Eligible to Vote!");
+    }
+    else if (a <= 0) {
+        printf("Invalid Age!");
+    }
+    else {
+        printf("You're not Eligible to Vote!");
+    }
+    return 0;
+}
+que 6 [not doing, it is simple if else if, and else statements]
+que 7
+#include <stdio.h>
+int main () {
+    int a;
+    printf("Leap year Checker!\n");
+    printf("Enter the year: \n");
+    scanf("%d", &a);
+    if (a%400 == 0) {
+        printf("%d is a LEAP YEAR!", a);
+    }
+    else if (a%100 == 0) {
+        printf("%d is NOT a LEAP YEAR!", a);
+    }
+    else if (a%4 == 0) {
+        printf("%d is a LEAP YEAR!", a);
+    }
+    else {
+        printf("%d is NOT a LEAP YEAR!", a);
+    }
+    return 0;
+}
+que 8
+#include <stdio.h>
+int main () {
+    int a;
+    printf("Electricity Bill\n");
+    printf("Please enter the number of electricity units consumed: ");
+    scanf("%d", &a);
+    if (a <= 100) {
+        printf("Your bill is: Rs.%d", a*5);
+    }
+    else if (a > 100 && a <= 200) {
+        printf("Your bill is: Rs.%d", a*7);
+    }
+    else if (a > 200) {
+        printf("Your bill is: Rs.%d", a*10);
+    }
+    return 0;
+}
+que 9 (bonus one)
+#include <stdio.h>
+int main () {
+    int a,b;
+    printf("Simple Calculator\n");
+    printf("Enter First Number: \n");
+    scanf("%d", &a);
+    printf("Enter Second Number: \n");
+    scanf("%d", &b);
+    printf("Choose the Operation to Proceed: \n");
+    printf("1.\t +\t(Addition)\n");
+    printf("2.\t -\t(Subtraction)\n");
+    printf("3.\t *\t(Mutliplication)\n");
+    printf("4.\t /\t(Division)\n");
+    if (a == 1) {
+        printf("The Sum of %d and %d is: ", a,b, a + b);
+    }
+    else if (a == 2) {
+        printf("The Difference of %d and %d is: ", a,b, a-b);
+    }
+    return 0;
+}
+i cannot do que 9, please tell me how to do it

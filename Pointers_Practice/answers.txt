@@ -1,0 +1,111 @@
+Answer 1:
+#include <stdio.h>
+
+int main()
+{
+    int n = 20;
+    int *p;
+    p = &n;
+    printf("%d\n", *p);
+    return 0;
+}
+
+Answer 2:
+#include <stdio.h>
+
+int main()
+{
+    int n = 10;
+    int *p;
+    p = &n;
+    printf("Before: %d\n", *p);
+    *p = 50;
+    printf("After: %d\n", *p);
+    return 0;
+}
+Answer 3:
+#include <stdio.h>
+
+int main()
+{
+    int a = 10, b = 20;
+    int *p, *o;
+    p = &a;
+    o = &b;
+    printf("Value of a: %d\n", *p);
+    printf("Address of a: %p\n", p);
+    printf("Value of b: %d\n", *o);
+    printf("Address of b: %p\n", o);
+
+    return 0;
+}
+Answer 4:
+#include <stdio.h>
+
+int main()
+{
+    int a = 10, b = 20, c = 30;
+    int *x, *y, *z;
+
+    printf("Value of a Before: %d\n", a);
+    printf("Value of b Before: %d\n", b);
+    printf("Value of c Before: %d\n", c);
+
+    x = &a;
+    y = &b;
+    z = &c;
+
+    *x = 100;
+    *y = 200;
+    *z = 300;
+
+    printf("Value of a After: %d\n", a);
+    printf("Value of b After: %d\n", b);
+    printf("Value of c After: %d\n", c);
+
+    return 0;
+}
+Answer 5:
+#include <stdio.h>
+
+void swapTwoNumbers(int *a, int *b)
+{
+    int temp;
+
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main()
+{
+    int a = 10;
+    int b = 20;
+
+    printf("Before a: %d\n", a);
+    printf("Before b: %d\n", b);
+
+    swapTwoNumbers(&a, &b);
+
+    printf("After a: %d\n", a);
+    printf("After b: %d\n", b);
+
+    return 0;
+}
+Answer 6:
+#include <stdio.h>
+
+int addTwoNumbers(int *a, int *b)
+{
+    int result;
+    result = (&a) + (&b);
+    return result;
+}
+
+int main()
+{
+    int a = 10, b = 20;
+    printf("%d + %d = %d\n", a, b, addTwoNumbers(a, b));
+
+    return 0;
+}
